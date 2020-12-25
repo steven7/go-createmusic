@@ -1,0 +1,16 @@
+{{define "yield"}}
+
+    <h1>The Robo DJ has completed your song!!</h1>
+
+    <form action="/tracks/{{.ID}}/play" method="POST">
+        <button type="submit" class="btn btn-primary">Listen to the new track!</button>
+    </form>
+
+    <form action="/tracks" method="POST">
+        <button type="submit" class="btn btn-primary">CGo back to track list</button>
+    </form>
+
+    <a href="/tracks/{{.ID}}/play"><button>Listen to the new track!</button></a>
+    <a href="/tracks"><button>Go back to track list</button></a>
+
+{{end}}

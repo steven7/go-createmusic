@@ -1,0 +1,12 @@
+{{define "yield"}}
+    <div class="row">
+        <h5>This would be #{{.ID}}</h5>
+        <h5>This would be song {{.MusicFile.Filename}}</h5>
+        <audio controls>
+            <source src= "{{.MusicFile.MusicPath}}" type="audio/mp3">
+            <source src= "{{.MusicFile.MusicPath}}" type="audio/ogg">
+            <source src= "{{.MusicFile.MusicPath}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+{{end}}
