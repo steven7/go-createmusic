@@ -1,22 +1,24 @@
 # Official docker container image
-FROM golang:1.14
+FROM golang:1.15.6
 
-# Copy the local package files to the container's workspace.
-#ADD . /go/src/go-createmusic
+ENV GO111MODULE=on
 
+WORKDIR /app
 
-#WORKDIR /go/src/go-createmusic
-WORKDIR '~/Documents/Go/go-createmusic'
+# copy go mod files first
+COPY go/go.mod go/go.sum ./
 
-COPY . .
+# download go mod dependencies
+RUN go mod download
 
-RUN go get -d -v ./...
-RUN go install -v ./...
+# copy the rest of the code
+COPY go .
 
-# Run the go-createmusic command by default when the container starts.
-#ENTRYPOINT /go/bin/go-createmusic
-ENTRYPOINT ~/Documents/Go/go-createmusic
+# go build and name output file
+RUN go build -o go-createmusic .
 
+#expore port to outside the container
 EXPOSE 5000
 
-CMD ["go-createmusic"]
+# run go output file
+CMD ["./go-createmusic"]
