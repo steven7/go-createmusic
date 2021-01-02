@@ -7,7 +7,7 @@ import (
 	"net/url"
 
 	"github.com/gorilla/schema"
-	"github.com/steven7/go-createmusic/models"
+	"github.com/steven7/go-createmusic/go/models"
 )
 
 //

@@ -10,9 +10,9 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/steven7/go-createmusic/context"
-	"github.com/steven7/go-createmusic/models"
-	"github.com/steven7/go-createmusic/views"
+	"github.com/steven7/go-createmusic/go/context"
+	"github.com/steven7/go-createmusic/go/models"
+	"github.com/steven7/go-createmusic/go/views"
 )
 
 const (

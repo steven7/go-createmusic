@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/steven7/go-createmusic/go/context"
-	"github.com/steven7/go-createmusic/models"
+	"github.com/steven7/go-createmusic/go/models"
 )
 
 

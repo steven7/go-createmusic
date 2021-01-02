@@ -7,7 +7,7 @@ import (
 	"github.com/gorilla/mux"
 	llctx "github.com/steven7/go-createmusic/go/context"
 	//"go-createmusic/dbx"
-	"github.com/steven7/go-createmusic/models"
+	"github.com/steven7/go-createmusic/go/models"
 	"golang.org/x/oauth2"
 	"net/http"
 	"time"

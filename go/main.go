@@ -5,12 +5,10 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
-	"github.com/steven7/go-createmusic/controllers"
-	"github.com/steven7/go-createmusic/middleware"
-	"github.com/steven7/go-createmusic/models"
-
-	// "golang.org/x/oauth2"
-	// "html/template"
+	"github.com/steven7/go-createmusic/go/config"
+	"github.com/steven7/go-createmusic/go/controllers"
+	"github.com/steven7/go-createmusic/go/middleware"
+	"github.com/steven7/go-createmusic/go/models"
 	"net/http"
 )
 
@@ -26,7 +24,7 @@ func main() {
 	flag.Parse()
 
 
-	cfg := LoadConfig(*boolPtr)
+	cfg := config.LoadConfig(*boolPtr)
 	dbCfg := cfg.Database
 	fmt.Println("trying with host ", dbCfg.Host)
 	services, err := models.NewServices(

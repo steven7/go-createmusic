@@ -10,9 +10,9 @@ import (
 
 	"github.com/steven7/go-createmusic/go/context"
 	"github.com/steven7/go-createmusic/go/email"
-	"github.com/steven7/go-createmusic/models"
-	"github.com/steven7/go-createmusic/rand"
-	"github.com/steven7/go-createmusic/views"
+	"github.com/steven7/go-createmusic/go/models"
+	"github.com/steven7/go-createmusic/go/rand"
+	"github.com/steven7/go-createmusic/go/views"
 )
 
 func NewUsers(us models.UserService, emailer *email.Client) *Users {

@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 	"github.com/steven7/go-createmusic/go/email"
-	"github.com/steven7/go-createmusic/models"
+	"github.com/steven7/go-createmusic/go/models"
 	"net/http"
 )
 

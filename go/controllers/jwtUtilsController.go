@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/steven7/go-createmusic/models"
+	"github.com/steven7/go-createmusic/go/models"
 	"net/http"
 	"os"
 	"strings"

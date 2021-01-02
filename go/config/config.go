@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"encoding/json"
@@ -7,10 +7,10 @@ import (
 )
 
 type Config struct {
-	Port     int    		`json:"port"`
-	Env      string 		`json:"env"`
-	Pepper   string 		`json:"pepper"`
-	HMACKey  string 		`json:"hmac_key"`
+	Port     int            `json:"port"`
+	Env      string         `json:"env"`
+	Pepper   string         `json:"pepper"`
+	HMACKey  string         `json:"hmac_key"`
 	Database PostgresConfig `json:"database"`
 	Mailgun  MailgunConfig  `json:"mailgun"`
 	Dropbox  OAuthConfig    `json:"dropbox"`
